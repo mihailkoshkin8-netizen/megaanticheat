@@ -1,0 +1,59 @@
+name: MegaAntiCheat
+version: '1.0.0'
+main: com.megaac.plugin.Main
+api-version: '1.21'
+author: MegaAC
+description: Античит + модерация чата + система проверок и репортов
+
+commands:
+  cheking:
+    description: Вызвать игрока на проверку античитом
+    usage: /cheking <ник>
+    permission: megaac.staff
+  unchecking:
+    description: Отпустить игрока с проверки на читы
+    usage: /unchecking <ник>
+    permission: megaac.staff
+  spec:
+    description: Наблюдение за игроком (спектатор)
+    usage: /spec <ник>
+    permission: megaac.staff
+  specoff:
+    description: Выйти из режима наблюдения
+    usage: /specoff
+    permission: megaac.staff
+  unspec:
+    description: Выйти из режима наблюдения (алиас /specoff)
+    usage: /unspec
+    permission: megaac.staff
+  v:
+    description: Включить/выключить ванишь
+    usage: /v
+    permission: megaac.staff
+  reports:
+    description: Открыть меню репортов
+    usage: /reports
+    permission: megaac.staff
+  tp:
+    description: Телепортироваться к игроку
+    usage: /tp <ник>
+    permission: megaac.staff
+  to:
+    description: Телепортировать игрока к себе
+    usage: /to <ник>
+    permission: megaac.staff
+  report:
+    description: Пожаловаться на игрока
+    usage: /report <ник> <причина>
+  megaac:
+    description: Служебные команды плагина
+    usage: /megaac reload
+    permission: megaac.admin
+
+permissions:
+  megaac.staff:
+    description: Доступ к варнингам, /cheking, /unchecking, /spec, /unspec, /tp, /to, /reports, ванишу и немодерированному чату
+    default: op
+  megaac.admin:
+    description: Полный доступ к настройкам плагина (/megaac reload)
+    default: op
